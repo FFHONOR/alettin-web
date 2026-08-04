@@ -168,85 +168,95 @@
       .defter-chip:hover {
         color: #111;
       }
-    
 
 
-    
-.hover-color { filter: grayscale(1) !important; transition: filter .35s ease !important; }
-.hover-color:hover { filter: grayscale(0) !important; }
-
-/* Birlikte yürüdüklerim grid öğeleri için */
-.partner-item {
-    background: #fff;
-    aspect-ratio: 8/5;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 22px;
-    box-sizing: border-box;
-    cursor: pointer;
-    overflow: hidden;
-}
-.partner-item img {
-    max-width: 100%;
-    max-height: 100%;
-    transition: transform 0.4s ease;
-}
-.partner-item:hover img {
-    transform: scale(1.05);
-}
-.enlarge-btn {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-    font-size: 16px;
-    opacity: 0;
-    transform: translateY(10px) scale(0.9);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    z-index: 10;
-}
-.partner-item:hover .enlarge-btn {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-.enlarge-btn svg {
-    width: 18px;
-    height: 18px;
-}
 
 
-html {
-  scroll-behavior: smooth;
-}
+      .hover-color {
+        filter: grayscale(1) !important;
+        transition: filter .35s ease !important;
+      }
 
-/* Scroll reveal (blur and fade) */
-[data-reveal] {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), 
-              transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-  will-change: opacity, transform;
-}
+      .hover-color:hover {
+        filter: grayscale(0) !important;
+      }
 
-[data-reveal].revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
+      /* Birlikte yürüdüklerim grid öğeleri için */
+      .partner-item {
+        background: #fff;
+        aspect-ratio: 8/5;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 22px;
+        box-sizing: border-box;
+        cursor: pointer;
+        overflow: hidden;
+      }
 
-</style>
+      .partner-item img {
+        max-width: 100%;
+        max-height: 100%;
+        transition: transform 0.4s ease;
+      }
+
+      .partner-item:hover img {
+        transform: scale(1.05);
+      }
+
+      .enlarge-btn {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        font-size: 16px;
+        opacity: 0;
+        transform: translateY(10px) scale(0.9);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        z-index: 10;
+      }
+
+      .partner-item:hover .enlarge-btn {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      .enlarge-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Scroll reveal (blur and fade) */
+      [data-reveal] {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+          transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        will-change: opacity, transform;
+      }
+
+      [data-reveal].revealed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
     <script src="38f90e4e-e7c5-4e8d-b92f-0e7cfc571154"></script>
     <style>
       html {
@@ -315,11 +325,6 @@ html {
       .defter-chip:hover {
         color: #111;
       }
-    
-
-
-
-
     </style>
     <div id="progBar" style="position:fixed;top:0;left:0;height:2px;width:0%;background:#111;z-index:120"></div>
 
@@ -361,7 +366,7 @@ html {
         <nav style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:40px 0">
           <div style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:8px">yedi soru
           </div>
-          <a href="#hakkimda" onclick="nav('hakkimda'); return true;" data-reveal="1" class="menu-kapi"
+          <a href="#/hakkimda" onclick="nav('hakkimda'); return false;" data-reveal="1" class="menu-kapi"
             style="display:grid;grid-template-columns:36px 1fr auto;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #E4E4E4;text-decoration:none;color:#111;transition:transform .3s cubic-bezier(.2,.7,.3,1)">
             <span style="font-size:12px;color:#9A9A9A">01</span>
             <span
@@ -369,7 +374,7 @@ html {
               geliyorum?</span>
             <span style="display:flex;align-items:baseline;gap:12px"><span
                 style="font-size:12px;color:#9A9A9A;display:none">van, deprem, ilk soru kütüphanesi</span></span>
-          </a><a href="#/yakinda" onclick="nav('yakinda'); return true;" data-reveal="1" class="menu-kapi"
+          </a><a href="#/yakinda" onclick="nav('yakinda', 'Rastlantıları Disipline Edelim'); return false;" data-reveal="1" class="menu-kapi"
             style="display:grid;grid-template-columns:36px 1fr auto;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #E4E4E4;text-decoration:none;color:#111;transition:transform .3s cubic-bezier(.2,.7,.3,1)">
             <span style="font-size:12px;color:#9A9A9A">02</span>
             <span
@@ -379,7 +384,7 @@ html {
                 style="font-size:11px;font-weight:500;letter-spacing:.08em;color:#9A9A9A;border:1px solid #E4E4E4;padding:3px 8px">yakında</span><span
                 style="font-size:12px;color:#9A9A9A;display:none">konuşma, eğitim, danışmanlık,
                 kolaylaştırıcılık</span></span>
-          </a><a href="#nekurduk" onclick="nav('nekurduk'); return true;" data-reveal="1" class="menu-kapi"
+          </a><a href="#/nekurduk" onclick="nav('nekurduk'); return false;" data-reveal="1" class="menu-kapi"
             style="display:grid;grid-template-columns:36px 1fr auto;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #E4E4E4;text-decoration:none;color:#111;transition:transform .3s cubic-bezier(.2,.7,.3,1)">
             <span style="font-size:12px;color:#9A9A9A">03</span>
             <span style="font-size:clamp(24px,3.6vw,38px);font-weight:600;letter-spacing:-.02em;line-height:1.15">neler
@@ -387,7 +392,7 @@ html {
             <span style="display:flex;align-items:baseline;gap:12px"><span
                 style="font-size:12px;color:#9A9A9A;display:none">hayal gücü merkezi, ödüller, hmmm,
                 podkids</span></span>
-          </a><a href="#defter" onclick="nav('defter'); return true;" data-reveal="1" class="menu-kapi"
+          </a><a href="#/defter" onclick="nav('defter'); return false;" data-reveal="1" class="menu-kapi"
             style="display:grid;grid-template-columns:36px 1fr auto;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #E4E4E4;text-decoration:none;color:#111;transition:transform .3s cubic-bezier(.2,.7,.3,1)">
             <span style="font-size:12px;color:#9A9A9A">04</span>
             <span
@@ -395,7 +400,7 @@ html {
               ne var?</span>
             <span style="display:flex;align-items:baseline;gap:12px"><span
                 style="font-size:12px;color:#9A9A9A;display:none">altı defter</span></span>
-          </a><a href="#/yakinda" onclick="nav('yakinda'); return true;" data-reveal="1" class="menu-kapi"
+          </a><a href="#/yakinda" onclick="nav('yakinda', 'Rastlantıları Disipline Edelim'); return false;" data-reveal="1" class="menu-kapi"
             style="display:grid;grid-template-columns:36px 1fr auto;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #E4E4E4;text-decoration:none;color:#111;transition:transform .3s cubic-bezier(.2,.7,.3,1)">
             <span style="font-size:12px;color:#9A9A9A">05</span>
             <span
@@ -404,7 +409,7 @@ html {
             <span style="display:flex;align-items:baseline;gap:12px"><span
                 style="font-size:11px;font-weight:500;letter-spacing:.08em;color:#9A9A9A;border:1px solid #E4E4E4;padding:3px 8px">yakında</span><span
                 style="font-size:12px;color:#9A9A9A;display:none">tedx, zirveler, kongreler</span></span>
-          </a><a href="#/yakinda" onclick="nav('yakinda'); return true;" data-reveal="1" class="menu-kapi"
+          </a><a href="#/yakinda" onclick="nav('yakinda', 'Rastlantıları Disipline Edelim'); return false;" data-reveal="1" class="menu-kapi"
             style="display:grid;grid-template-columns:36px 1fr auto;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #E4E4E4;text-decoration:none;color:#111;transition:transform .3s cubic-bezier(.2,.7,.3,1)">
             <span style="font-size:12px;color:#9A9A9A">06</span>
             <span
@@ -413,7 +418,7 @@ html {
             <span style="display:flex;align-items:baseline;gap:12px"><span
                 style="font-size:11px;font-weight:500;letter-spacing:.08em;color:#9A9A9A;border:1px solid #E4E4E4;padding:3px 8px">yakında</span><span
                 style="font-size:12px;color:#9A9A9A;display:none">merak serisi, dokuz yazı</span></span>
-          </a><a href="#/yakinda" onclick="nav('yakinda'); return true;" data-reveal="1" class="menu-kapi"
+          </a><a href="#/yakinda" onclick="nav('yakinda', 'Rastlantıları Disipline Edelim'); return false;" data-reveal="1" class="menu-kapi"
             style="display:grid;grid-template-columns:36px 1fr auto;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #E4E4E4;text-decoration:none;color:#111;transition:transform .3s cubic-bezier(.2,.7,.3,1)">
             <span style="font-size:12px;color:#9A9A9A">07</span>
             <span style="font-size:clamp(24px,3.6vw,38px);font-weight:600;letter-spacing:-.02em;line-height:1.15">şimdi
@@ -462,10 +467,11 @@ html {
             </div>
             <div data-reveal="1" style="transition-delay:.12s;justify-self:end;width:min(100%,440px)">
               <div id="heroImg" style="will-change:transform">
-                <div class="hover-color"  style="aspect-ratio:3/4;"
+                <div class="hover-color" style="aspect-ratio:3/4;"
                   onmouseover="this.style.cssText += ';filter:grayscale(0)'"
-                  onmouseout="this.style.cssText = this.style.cssText.replace('filter:grayscale(0)', '')" class="hover-color">
-                  <img src="images/0Z3A0584.jpg" alt="hero-portre"
+                  onmouseout="this.style.cssText = this.style.cssText.replace('filter:grayscale(0)', '')"
+                  class="hover-color">
+                  <img src="images/Kapak.png" alt="hero-portre"
                     style="width:100%; height:100%; object-fit:cover; display:block;">
                 </div>
                 <div style="font-size:12px;color:#6E6E6E;margin-top:10px">Emre Alettin Keskin</div>
@@ -480,7 +486,7 @@ html {
               style="margin:0 0 clamp(40px,5vw,64px);font-size:clamp(28px,3.6vw,40px);font-weight:700;letter-spacing:-.025em;line-height:1.25;max-width:760px;text-wrap:pretty">
               Yedi soru, yolculuğun yedi farklı kapısı. Hangisinden girersen, oradan başlıyorsun.</h2>
             <div>
-              <a href="#hakkimda" onclick="nav('hakkimda'); return true;" data-reveal="1" class="menu-kapi"
+              <a href="#/hakkimda" onclick="nav('hakkimda'); return false;" data-reveal="1" class="menu-kapi"
                 style="display:grid;grid-template-columns:36px 1fr auto;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #E4E4E4;text-decoration:none;color:#111;transition:transform .3s cubic-bezier(.2,.7,.3,1)">
                 <span style="font-size:12px;color:#9A9A9A">01</span>
                 <span
@@ -488,7 +494,7 @@ html {
                   geliyorum?</span>
                 <span style="display:flex;align-items:baseline;gap:12px"><span
                     style="font-size:12px;color:#9A9A9A;display:none">van, deprem, ilk soru kütüphanesi</span></span>
-              </a><a href="#/yakinda" onclick="nav('yakinda'); return true;" data-reveal="1" class="menu-kapi"
+              </a><a href="#/yakinda" onclick="nav('yakinda', 'Rastlantıları Disipline Edelim'); return false;" data-reveal="1" class="menu-kapi"
                 style="display:grid;grid-template-columns:36px 1fr auto;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #E4E4E4;text-decoration:none;color:#111;transition:transform .3s cubic-bezier(.2,.7,.3,1)">
                 <span style="font-size:12px;color:#9A9A9A">02</span>
                 <span
@@ -498,7 +504,7 @@ html {
                     style="font-size:11px;font-weight:500;letter-spacing:.08em;color:#9A9A9A;border:1px solid #E4E4E4;padding:3px 8px">yakında</span><span
                     style="font-size:12px;color:#9A9A9A;display:none">konuşma, eğitim, danışmanlık,
                     kolaylaştırıcılık</span></span>
-              </a><a href="#nekurduk" onclick="nav('nekurduk'); return true;" data-reveal="1" class="menu-kapi"
+              </a><a href="#/nekurduk" onclick="nav('nekurduk'); return false;" data-reveal="1" class="menu-kapi"
                 style="display:grid;grid-template-columns:36px 1fr auto;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #E4E4E4;text-decoration:none;color:#111;transition:transform .3s cubic-bezier(.2,.7,.3,1)">
                 <span style="font-size:12px;color:#9A9A9A">03</span>
                 <span
@@ -507,7 +513,7 @@ html {
                 <span style="display:flex;align-items:baseline;gap:12px"><span
                     style="font-size:12px;color:#9A9A9A;display:none">hayal gücü merkezi, ödüller, hmmm,
                     podkids</span></span>
-              </a><a href="#defter" onclick="nav('defter'); return true;" data-reveal="1" class="menu-kapi"
+              </a><a href="#/defter" onclick="nav('defter'); return false;" data-reveal="1" class="menu-kapi"
                 style="display:grid;grid-template-columns:36px 1fr auto;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #E4E4E4;text-decoration:none;color:#111;transition:transform .3s cubic-bezier(.2,.7,.3,1)">
                 <span style="font-size:12px;color:#9A9A9A">04</span>
                 <span
@@ -515,7 +521,7 @@ html {
                   ne var?</span>
                 <span style="display:flex;align-items:baseline;gap:12px"><span
                     style="font-size:12px;color:#9A9A9A;display:none">altı defter</span></span>
-              </a><a href="#/yakinda" onclick="nav('yakinda'); return true;" data-reveal="1" class="menu-kapi"
+              </a><a href="#/yakinda" onclick="nav('yakinda', 'Rastlantıları Disipline Edelim'); return false;" data-reveal="1" class="menu-kapi"
                 style="display:grid;grid-template-columns:36px 1fr auto;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #E4E4E4;text-decoration:none;color:#111;transition:transform .3s cubic-bezier(.2,.7,.3,1)">
                 <span style="font-size:12px;color:#9A9A9A">05</span>
                 <span
@@ -524,7 +530,7 @@ html {
                 <span style="display:flex;align-items:baseline;gap:12px"><span
                     style="font-size:11px;font-weight:500;letter-spacing:.08em;color:#9A9A9A;border:1px solid #E4E4E4;padding:3px 8px">yakında</span><span
                     style="font-size:12px;color:#9A9A9A;display:none">tedx, zirveler, kongreler</span></span>
-              </a><a href="#/yakinda" onclick="nav('yakinda'); return true;" data-reveal="1" class="menu-kapi"
+              </a><a href="#/yakinda" onclick="nav('yakinda', 'Rastlantıları Disipline Edelim'); return false;" data-reveal="1" class="menu-kapi"
                 style="display:grid;grid-template-columns:36px 1fr auto;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #E4E4E4;text-decoration:none;color:#111;transition:transform .3s cubic-bezier(.2,.7,.3,1)">
                 <span style="font-size:12px;color:#9A9A9A">06</span>
                 <span
@@ -533,7 +539,7 @@ html {
                 <span style="display:flex;align-items:baseline;gap:12px"><span
                     style="font-size:11px;font-weight:500;letter-spacing:.08em;color:#9A9A9A;border:1px solid #E4E4E4;padding:3px 8px">yakında</span><span
                     style="font-size:12px;color:#9A9A9A;display:none">merak serisi, dokuz yazı</span></span>
-              </a><a href="#/yakinda" onclick="nav('yakinda'); return true;" data-reveal="1" class="menu-kapi"
+              </a><a href="#/yakinda" onclick="nav('yakinda', 'Rastlantıları Disipline Edelim'); return false;" data-reveal="1" class="menu-kapi"
                 style="display:grid;grid-template-columns:36px 1fr auto;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid #E4E4E4;text-decoration:none;color:#111;transition:transform .3s cubic-bezier(.2,.7,.3,1)">
                 <span style="font-size:12px;color:#9A9A9A">07</span>
                 <span
@@ -694,8 +700,10 @@ html {
             <div data-reveal="1" style="margin-top:clamp(40px,5vw,64px);"
               onmouseover="this.style.cssText += ';filter:grayscale(0)'"
               onmouseout="this.style.cssText = this.style.cssText.replace('filter:grayscale(0)', '')">
-              <div class="hover-color"><div style="aspect-ratio:21/9"><img src="images/16.jpg" alt="home-sahne"
-                  style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+              <div class="hover-color">
+                <div style="aspect-ratio:21/9"><img src="images/16.jpg" alt="home-sahne"
+                    style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+              </div>
             </div>
           </div>
         </section>
@@ -710,170 +718,284 @@ html {
             <div
               style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr));gap:1px;background:#E4E4E4;border:1px solid #E4E4E4">
               <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/19.jpg" alt="milli eğitim bakanlığı"
+                <img src="images/19.jpg" alt="milli eğitim bakanlığı" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
+              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
+                <img src="images/2.ENG02001-2.jpg" alt="eba" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
+              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
+                <img src="images/25.jpg" alt="anadolu efes" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
+              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
+                <img src="images/26.jpg" alt="enerjisa üretim" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
+              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
+                <img src="images/3.jpg" alt="mapfre vakfı" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
+              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
+                <img src="images/4.HGÖ-20 Şubat-Kampüs_DSCF8940.JPG" alt="borusan"
                   style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
               <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/2.ENG02001-2.jpg" alt="eba" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
+                <img src="images/7R3A1345.JPG" alt="akbank" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
               <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/25.jpg" alt="anadolu efes" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
+                <img src="images/7R3A1383.JPG" alt="ideasoft" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
               <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/26.jpg" alt="enerjisa üretim" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
+                <img src="images/7R3A1540.JPG" alt="ankara kalkınma ajansı" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
               <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/3.jpg" alt="mapfre vakfı" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
+                <img src="images/ankara 2.JPG" alt="tübitak" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
               <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/4.HGÖ-20 Şubat-Kampüs_DSCF8940.JPG" alt="borusan" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
+                <img src="images/ankara 3.JPG" alt="ibb" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
               <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/7R3A1345.JPG" alt="akbank" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
+                <img src="images/Büyük 5 kopyası.jpeg" alt="khan academy" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
               <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/7R3A1383.JPG" alt="ideasoft" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
+                <img src="images/DSC00340.JPG" alt="sabancı üniversitesi" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
               <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/7R3A1540.JPG" alt="ankara kalkınma ajansı"
+                <img src="images/DSC03578.jpg" alt="koç okulu" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
+              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
+                <img src="images/DSC04036.jpg" alt="enka" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
+              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
+                <img src="images/ENG01975-2.jpg" alt="zorlu" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
+              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
+                <img src="images/ENG01997-2.2.jpg" alt="nissan" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
+              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
+                <img src="images/ENG02013-2.jpg" alt="öğretmen ağı" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
+              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
+                <img src="images/ENG02017-2.jpg" alt="eğitim reform girişimi" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
+              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
+                <img src="images/ENG09719.JPG" alt="ashoka" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
+              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
+                <img src="images/Gemini_Generated_Image_ac0c2iac0c2iac0c.png" alt="imece"
                   style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
               <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/ankara 2.JPG" alt="tübitak" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
-              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/ankara 3.JPG" alt="ibb" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
-              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/Büyük 5 kopyası.jpeg" alt="khan academy" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
-              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/DSC00340.JPG" alt="sabancı üniversitesi"
+                <img src="images/Gemini_Generated_Image_bme7ovbme7ovbme7.png" alt="nesin vakfı"
                   style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
               <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/DSC03578.jpg" alt="koç okulu" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
-              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/DSC04036.jpg" alt="enka" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
-              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/ENG01975-2.jpg" alt="zorlu" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
-              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/ENG01997-2.2.jpg" alt="nissan" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
-              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/ENG02013-2.jpg" alt="öğretmen ağı" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
-              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/ENG02017-2.jpg" alt="eğitim reform girişimi"
-                  style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
-              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/ENG09719.JPG" alt="ashoka" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
-              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/Gemini_Generated_Image_ac0c2iac0c2iac0c.png" alt="imece" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
-              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/Gemini_Generated_Image_bme7ovbme7ovbme7.png" alt="nesin vakfı" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
-              <div data-reveal="1" class="partner-item" onclick="window.open(this.querySelector('img').src, '_blank')">
-        <img
-                  src="images/gobeklitepe.jpg" alt="darüşşafaka" style="max-width:100%;max-height:100%;">
-        <div class="enlarge-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-        </div>
-    </div>
+                <img src="images/gobeklitepe.jpg" alt="darüşşafaka" style="max-width:100%;max-height:100%;">
+                <div class="enlarge-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </div>
+              </div>
             </div>
 
           </div>
@@ -940,429 +1062,446 @@ html {
             onmouseover="this.style.cssText += ';filter:grayscale(0)'"
             onmouseout="this.style.cssText = this.style.cssText.replace('filter:grayscale(0)', '')">
             <div style="aspect-ratio:21/9"><img src="images/gobeklitepe.png" alt="hakkimda-portre"
-                style="width:100%; height:100%; object-fit:cover; display:block;"></div></div>
+                style="width:100%; height:100%; object-fit:cover; display:block;"></div>
           </div>
         </section>
 
-        <section style="max-width:920px;margin:0 auto;padding:clamp(48px,6vw,80px) 28px clamp(64px,9vw,120px)">
-          <div style="max-width:680px;margin:0 auto">
-            <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">Uşak'ta doğdum, Eskişehir'de
-              büyüdüm, yirmi üç yaşımda kendimi Van'da buldum. Aradan on dört yıl geçti. Hâlâ aynı sorunun peşindeyim:
-              bir çocuk merak ettiğinde ne yapıyoruz?</p>
+    <section style="max-width:920px;margin:0 auto;padding:clamp(48px,6vw,80px) 28px clamp(64px,9vw,120px)">
+      <div style="max-width:680px;margin:0 auto">
+        <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">Uşak'ta doğdum, Eskişehir'de
+          büyüdüm, yirmi üç yaşımda kendimi Van'da buldum. Aradan on dört yıl geçti. Hâlâ aynı sorunun peşindeyim:
+          bir çocuk merak ettiğinde ne yapıyoruz?</p>
 
-            <h2 data-reveal="1" style="margin:64px 0 20px;font-size:26px;font-weight:600;letter-spacing:-.02em">Uşak
-            </h2>
-            <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">Meraklı bir çocuktum.
-              Bu kelimeyi bugün sevimli buluyorum ama o zamanlar öğretmenlerim başka kelimeler kullanırdı. <span
-                style="font-weight:600">Rahatsız edici. Düzeni bozan. Sorusu bitmez.</span></p>
-            <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">İlkokulda öğretmenim beni
-              sınıfın "gerizekalılar" kümesine dahil etmişti. Dokuz yaşımdaydım. O aşağılanmanın içinden bir karar
-              çıktı: öğretmen olacaktım. Ama zihnimde şekillenen ilk karar <span style="font-weight:600">nasıl bir
-                öğretmen olacağım</span> değildi, <span style="font-weight:600">nasıl bir öğretmen olmayacağımdı.</span>
-            </p>
+        <h2 data-reveal="1" style="margin:64px 0 20px;font-size:26px;font-weight:600;letter-spacing:-.02em">Uşak
+        </h2>
+        <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">Meraklı bir çocuktum.
+          Bu kelimeyi bugün sevimli buluyorum ama o zamanlar öğretmenlerim başka kelimeler kullanırdı. <span
+            style="font-weight:600">Rahatsız edici. Düzeni bozan. Sorusu bitmez.</span></p>
+        <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">İlkokulda öğretmenim beni
+          sınıfın "gerizekalılar" kümesine dahil etmişti. Dokuz yaşımdaydım. O aşağılanmanın içinden bir karar
+          çıktı: öğretmen olacaktım. Ama zihnimde şekillenen ilk karar <span style="font-weight:600">nasıl bir
+            öğretmen olacağım</span> değildi, <span style="font-weight:600">nasıl bir öğretmen olmayacağımdı.</span>
+        </p>
 
-            <h2 data-reveal="1" style="margin:64px 0 20px;font-size:26px;font-weight:600;letter-spacing:-.02em">
-              Eskişehir ve İstanbul, ilk perde</h2>
-            <p data-reveal="1" style="margin:0 0 28px;font-size:16px;line-height:1.8;color:#222">Eskişehir Güzel
-              Sanatlar'da bir hocam, Şemsettin Eder, bir cümle söyledi:</p>
-            <p data-reveal="1"
-              style="margin:0 0 28px;padding:20px 0;border-top:1px solid #E4E4E4;border-bottom:1px solid #E4E4E4;font-size:22px;font-weight:600;letter-spacing:-.01em">
-              Rastlantıları disipline etmek.</p>
-            <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">Bir ressam tuvale
-              yanlışlıkla damlattığı boyayı silmek yerine tablonun odak noktası yapar ya — işte o. Tesadüfü inkâr etmek
-              değil, ona bir form vermek. Sonradan anladım: yalnızca bir resim tekniği değildi. Hayat da aynı tuval,
-              sana sormadan boyalar damlatıyor.</p>
-            <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">2009'da diplomamı
-              aldım, İstanbul'a gittim. Bir dergide görsel yönetmenlik yaptım. Zanaatım güzeldi. Ama bir gün toplantıda
-              kapak konuşuyorduk; hangi renk daha çok satar, hangi yüz daha çok ilgi çeker. O akşam fark ettim, bütün o
-              tartışmada tek bir kez bile şunu sormamıştık:</p>
-            <p data-reveal="1" style="margin:0 0 20px;font-size:18px;font-weight:600">Bu kimin işine yarar?</p>
-            <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">İşe giderken okul önlerinde
-              çocuklar görürdüm. Onlara bakardım uzaktan. İçimde bir boşluk vardı. Adını koymak zaman aldı. Adı
-              "çocukluk"tu.</p>
+        <h2 data-reveal="1" style="margin:64px 0 20px;font-size:26px;font-weight:600;letter-spacing:-.02em">
+          Eskişehir ve İstanbul, ilk perde</h2>
+        <p data-reveal="1" style="margin:0 0 28px;font-size:16px;line-height:1.8;color:#222">Eskişehir Güzel
+          Sanatlar'da bir hocam, Şemsettin Eder, bir cümle söyledi:</p>
+        <p data-reveal="1"
+          style="margin:0 0 28px;padding:20px 0;border-top:1px solid #E4E4E4;border-bottom:1px solid #E4E4E4;font-size:22px;font-weight:600;letter-spacing:-.01em">
+          Rastlantıları disipline etmek.</p>
+        <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">Bir ressam tuvale
+          yanlışlıkla damlattığı boyayı silmek yerine tablonun odak noktası yapar ya — işte o. Tesadüfü inkâr etmek
+          değil, ona bir form vermek. Sonradan anladım: yalnızca bir resim tekniği değildi. Hayat da aynı tuval,
+          sana sormadan boyalar damlatıyor.</p>
+        <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">2009'da diplomamı
+          aldım, İstanbul'a gittim. Bir dergide görsel yönetmenlik yaptım. Zanaatım güzeldi. Ama bir gün toplantıda
+          kapak konuşuyorduk; hangi renk daha çok satar, hangi yüz daha çok ilgi çeker. O akşam fark ettim, bütün o
+          tartışmada tek bir kez bile şunu sormamıştık:</p>
+        <p data-reveal="1" style="margin:0 0 20px;font-size:18px;font-weight:600">Bu kimin işine yarar?</p>
+        <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">İşe giderken okul önlerinde
+          çocuklar görürdüm. Onlara bakardım uzaktan. İçimde bir boşluk vardı. Adını koymak zaman aldı. Adı
+          "çocukluk"tu.</p>
 
-            <h2 data-reveal="1" style="margin:64px 0 20px;font-size:26px;font-weight:600;letter-spacing:-.02em">Van</h2>
-            <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">2011'de atamam Van'a,
-              Hacıbekir Mahallesi'ne çıktı. İki ay sonra deprem geldi. Fiziksel olarak göçük altında kalmadım. Ama
-              psikolojik olarak tam altındaydım o göçüğün.</p>
-            <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">Beni o enkazdan çıkaran
-              çocukların sorularıydı. "Deprem neden oluyor, yeraltında ne var?" "Hocam, deprem olan yerlerde çiçek açar
-              mı yine?" Bir çocuk hâlâ merak ediyorsa hayat devam ediyor demektir.</p>
-            <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">İkinci dönem anlatmayı
-              bıraktım. "Siz neyi merak ediyorsunuz?" diye sordum. Yüzlerce kâğıt geri geldi. Çoğu varoluş, uzay ve
-              anlam üzerineydi. On çocuktan yedisi gökyüzüne bakıyordu.</p>
-            <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">O sabah kendime şunu
-              sordum: müfredatı Ankara'dan gelen kâğıtlar yerine, bu çocukların meraklarından oluşturabilir miyim?</p>
-            <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">O soru Soru Merak
-              Kütüphanesi'nin tohumunu attı.</p>
-          </div>
+        <h2 data-reveal="1" style="margin:64px 0 20px;font-size:26px;font-weight:600;letter-spacing:-.02em">Van</h2>
+        <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">2011'de atamam Van'a,
+          Hacıbekir Mahallesi'ne çıktı. İki ay sonra deprem geldi. Fiziksel olarak göçük altında kalmadım. Ama
+          psikolojik olarak tam altındaydım o göçüğün.</p>
+        <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">Beni o enkazdan çıkaran
+          çocukların sorularıydı. "Deprem neden oluyor, yeraltında ne var?" "Hocam, deprem olan yerlerde çiçek açar
+          mı yine?" Bir çocuk hâlâ merak ediyorsa hayat devam ediyor demektir.</p>
+        <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">İkinci dönem anlatmayı
+          bıraktım. "Siz neyi merak ediyorsunuz?" diye sordum. Yüzlerce kâğıt geri geldi. Çoğu varoluş, uzay ve
+          anlam üzerineydi. On çocuktan yedisi gökyüzüne bakıyordu.</p>
+        <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">O sabah kendime şunu
+          sordum: müfredatı Ankara'dan gelen kâğıtlar yerine, bu çocukların meraklarından oluşturabilir miyim?</p>
+        <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">O soru Soru Merak
+          Kütüphanesi'nin tohumunu attı.</p>
+      </div>
 
-          <div data-reveal="1" style="margin:clamp(56px,7vw,88px) auto;text-align:center;max-width:760px">
-            <p
-              style="margin:0;font-size:clamp(24px,3vw,32px);font-weight:600;letter-spacing:-.02em;line-height:1.3;text-wrap:balance">
-              “Yeter, bizim de sorularımız var” dedi bir çocuk.</p>
-            <div style="font-size:12px;color:#6E6E6E;margin-top:16px">— Van, 2012</div>
-          </div>
+      <div data-reveal="1" style="margin:clamp(56px,7vw,88px) auto;text-align:center;max-width:760px">
+        <p
+          style="margin:0;font-size:clamp(24px,3vw,32px);font-weight:600;letter-spacing:-.02em;line-height:1.3;text-wrap:balance">
+          “Yeter, bizim de sorularımız var” dedi bir çocuk.</p>
+        <div style="font-size:12px;color:#6E6E6E;margin-top:16px">— Van, 2012</div>
+      </div>
 
-          <div style="max-width:680px;margin:0 auto">
-            <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">Dört yıl Van'da kaldım.
-              Mardin'e, Diyarbakır'a, Urfa'ya gittim. Erbane öğrendim. Beş defter doldurdum. Çocukların sorularını bir
-              masalın içine gömüp Kamil'in Seyir Defteri'ni yazdım.</p>
-            <div data-reveal="1" style="margin:40px 0;"
-              onmouseover="this.style.cssText += ';filter:grayscale(0)'"
-              onmouseout="this.style.cssText = this.style.cssText.replace('filter:grayscale(0)', '')">
-              <div style="aspect-ratio:3/2"><img src="images/hero-portre.jpg" alt="hakkimda-van"
-                  style="width:100%; height:100%; object-fit:cover; display:block;"></div>
-              <div style="font-size:12px;color:#6E6E6E;margin-top:10px">Van, 2011–2015</div>
+      <div style="max-width:680px;margin:0 auto">
+        <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">Dört yıl Van'da kaldım.
+          Mardin'e, Diyarbakır'a, Urfa'ya gittim. Erbane öğrendim. Beş defter doldurdum. Çocukların sorularını bir
+          masalın içine gömüp Kamil'in Seyir Defteri'ni yazdım.</p>
+        <div data-reveal="1" style="margin:40px 0;" onmouseover="this.style.cssText += ';filter:grayscale(0)'"
+          onmouseout="this.style.cssText = this.style.cssText.replace('filter:grayscale(0)', '')">
+          <div style="aspect-ratio:3/2"><img src="images/hero-portre.jpg" alt="hakkimda-van"
+              style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+          <div style="font-size:12px;color:#6E6E6E;margin-top:10px">Van, 2011–2015</div>
+        </div>
+
+        <h2 data-reveal="1" style="margin:64px 0 20px;font-size:26px;font-weight:600;letter-spacing:-.02em">
+          İstanbul, ikinci perde</h2>
+        <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">2015'te tayinim
+          İstanbul'a çıktı. Bavulum ağırdı, ama ağırlığı Van'dan getirdiklerimdendi.</p>
+        <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">Gaziosmanpaşa
+          Ortaokulu'nda yöntem aynı kaldı, kütüphane sıfırdan kuruldu. 2016'da öğrencilerimle birlikte okulun bodrum
+          katını işgal ettik. Soruyu çocuklara sorduk: <span style="font-weight:600">çocuk eliyle kurulan, yeni
+            nesil bir öğrenme mekanı neye benzer?</span> Cevap bir mekan oldu. Adını çocuklar koydu: Hayal Gücü
+          Merkezi.</p>
+        <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">Sonra başka okullarda, başka
+          şehirlerde kuruldu. Hayal Gücü Ödülleri, hmmm, Podkids geldi. Hepsinin altında aynı soru vardı: çocuğun
+          kendi sorusu masada olunca ne oluyor?</p>
+
+        <h2 data-reveal="1" style="margin:64px 0 20px;font-size:26px;font-weight:600;letter-spacing:-.02em">Bugün
+        </h2>
+        <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">Aradığım şey hâlâ aynı.
+          Bir çocuğun bir soru sorduğunda yanında duran biri olmak. Sınıfta, sahnede, defterde, atölyede; nerede
+          olursam olayım, aynı işi yapıyorum.</p>
+        <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">Defterimde yarım kalmış birkaç
+          eser var. Aklımda cevaplayamadığım birkaç soru duruyor. Bir sonraki sahneye çıkmayı bekliyorum.</p>
+      </div>
+
+      <div data-reveal="1" style="margin:clamp(56px,7vw,88px) auto 0;text-align:center;max-width:760px">
+
+      </div>
+
+      <div style="max-width:680px;margin:40px auto 0">
+        <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">Ben de hâlâ koruyorum. Hâlâ
+          soruyorum.</p>
+        <div data-reveal="1"
+          style="display:flex;flex-wrap:wrap;gap:16px 36px;margin-top:48px;padding-top:32px;border-top:1px solid #E4E4E4">
+          <a href="#/defter" onclick="nav('defter'); return false;"
+            style="font-size:15px;font-weight:500;color:#111;text-decoration:none;border-bottom:1px solid #111;padding:3px 2px"
+            onmouseover="this.style.cssText += ';background:#111;color:#fff'"
+            onmouseout="this.style.cssText = this.style.cssText.replace('background:#111;color:#fff', '')">→
+            defterimde ne var?</a>
+          <a href="#" onclick="nav('yakinda'); return false;"
+            style="font-size:15px;font-weight:500;color:#111;text-decoration:none;border-bottom:1px solid #111;padding:3px 2px"
+            onmouseover="this.style.cssText += ';background:#111;color:#fff'"
+            onmouseout="this.style.cssText = this.style.cssText.replace('background:#111;color:#fff', '')">→
+            rastlantıları disipline edelim</a>
+        </div>
+      </div>
+    </section>
+    </main>
+  </div>
+
+  <div id="page-defter" class="page-section" style="display:none;">
+    <main>
+      <section style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) 28px clamp(40px,5vw,64px)">
+        <a href="#/" onclick="nav('home'); return false;" data-reveal="1"
+          style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:#6E6E6E;text-decoration:none;margin-bottom:32px"
+          onmouseover="this.style.cssText += ';color:#111'"
+          onmouseout="this.style.cssText = this.style.cssText.replace('color:#111', '')">← anasayfa</a>
+        <div data-reveal="1"
+          style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:24px">soru 04</div>
+        <h1 data-reveal="1"
+          style="margin:0;font-size:clamp(40px,6vw,76px);font-weight:600;letter-spacing:-.035em;line-height:1.03">
+          defterimde ne var?</h1>
+        <div data-reveal="1" style="max-width:680px;margin-top:32px">
+          <p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Merak, her canlının doğasında var. Soru
+            sormak ise şu an bildiğimiz kadarıyla yalnızca insanın yaptığı bir şey. Bazı insanlar araştırarak, kimi
+            deneyler yaparak, kimi düşünerek cevaplar ve yeni sorular arıyor.</p>
+          <p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Ben defterlerime merak ettiğim soruları
+            çiziyorum, sonra dijital olarak düzenliyorum. Burada merak ettiğim ve fakat cevaplarını aramadığım sorular
+            var. Resim yaparken sorulardan ve boşluktan sıkça faydalanırım; bilirim ki bazı boşluklar doldurulmaz,
+            bazı sorular cevaplanamaz.</p>
+          <p style="margin:0;font-size:18px;font-weight:600">Altı defter.</p>
+        </div>
+      </section>
+
+      <section
+        style="border-top:1px solid #E4E4E4;position:sticky;top:64px;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);z-index:40">
+        <div
+          style="max-width:1280px;margin:0 auto;padding:0 28px;display:flex;flex-wrap:wrap;gap:4px 28px;align-items:center;min-height:52px">
+
+          <button onclick="selectDefter('gog', this); return false;" class="defter-chip active">göğ</button>
+          <button onclick="selectDefter('gece', this); return false;" class="defter-chip">geceyi
+            alkışlayanlar</button>
+          <button onclick="selectDefter('dunya', this); return false;" class="defter-chip">dünyanın bu hali</button>
+          <button onclick="selectDefter('tamamlanma', this); return false;" class="defter-chip">tamamlanma
+            arzusu</button>
+          <button onclick="selectDefter('sanci', this); return false;" class="defter-chip">8. sancım</button>
+          <button onclick="selectDefter('uyku', this); return false;" class="defter-chip">bu kimin uykusu?</button>
+
+        </div>
+      </section>
+
+      <section style="border-top:1px solid #E4E4E4">
+        <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,72px) 28px clamp(64px,9vw,120px)">
+
+          <div id="defter-gog" class="defter-tab" style="display:block;">
+            <div style="max-width:680px">
+              <div data-reveal="1"
+                style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:16px">göğ ·
+                2016 · dokuz iş</div>
+              <p data-reveal="1" style="margin:0 0 24px;font-size:22px;font-weight:600;letter-spacing:-.015em">çünkü
+                insan büyümez, göğerir</p>
+              <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Çocukluğumdan beri
+                arkadaşlarımla göğe bakmaya gideriz. Uşak'ta, Eskişehir'de, Van'da, gittiğim her yerde. İstanbul'a
+                gelince fark ettiğim ilk şey şu oldu: burada insanların göğe bakacak bir yeri yok.</p>
+              <p data-reveal="1" style="margin:0 0 28px;font-size:16px;line-height:1.8;color:#222">Sonra düşünmeye
+                başladım. Bakışlar, duyuşlar, gülüşler nerede birikir? Bir sıkıntı anında göğe bakamayanlar nereye
+                bakarlar?</p>
+              <div data-reveal="1" style="padding:24px 0;border-top:1px solid #E4E4E4;border-bottom:1px solid #E4E4E4">
+                <p style="margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em">“Beni kendimden bir gök
+                  saklıyor.”</p>
+                <div style="font-size:11px;color:#6E6E6E;margin-top:16px">GÖĞ defterinden · sözü Olcay Özmen'in</div>
+              </div>
             </div>
-
-            <h2 data-reveal="1" style="margin:64px 0 20px;font-size:26px;font-weight:600;letter-spacing:-.02em">
-              İstanbul, ikinci perde</h2>
-            <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">2015'te tayinim
-              İstanbul'a çıktı. Bavulum ağırdı, ama ağırlığı Van'dan getirdiklerimdendi.</p>
-            <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">Gaziosmanpaşa
-              Ortaokulu'nda yöntem aynı kaldı, kütüphane sıfırdan kuruldu. 2016'da öğrencilerimle birlikte okulun bodrum
-              katını işgal ettik. Soruyu çocuklara sorduk: <span style="font-weight:600">çocuk eliyle kurulan, yeni
-                nesil bir öğrenme mekanı neye benzer?</span> Cevap bir mekan oldu. Adını çocuklar koydu: Hayal Gücü
-              Merkezi.</p>
-            <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">Sonra başka okullarda, başka
-              şehirlerde kuruldu. Hayal Gücü Ödülleri, hmmm, Podkids geldi. Hepsinin altında aynı soru vardı: çocuğun
-              kendi sorusu masada olunca ne oluyor?</p>
-
-            <h2 data-reveal="1" style="margin:64px 0 20px;font-size:26px;font-weight:600;letter-spacing:-.02em">Bugün
-            </h2>
-            <p data-reveal="1" style="margin:0 0 20px;font-size:16px;line-height:1.8;color:#222">Aradığım şey hâlâ aynı.
-              Bir çocuğun bir soru sorduğunda yanında duran biri olmak. Sınıfta, sahnede, defterde, atölyede; nerede
-              olursam olayım, aynı işi yapıyorum.</p>
-            <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">Defterimde yarım kalmış birkaç
-              eser var. Aklımda cevaplayamadığım birkaç soru duruyor. Bir sonraki sahneye çıkmayı bekliyorum.</p>
           </div>
 
-          <div data-reveal="1" style="margin:clamp(56px,7vw,88px) auto 0;text-align:center;max-width:760px">
-
-          </div>
-
-          <div style="max-width:680px;margin:40px auto 0">
-            <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">Ben de hâlâ koruyorum. Hâlâ
-              soruyorum.</p>
-            <div data-reveal="1"
-              style="display:flex;flex-wrap:wrap;gap:16px 36px;margin-top:48px;padding-top:32px;border-top:1px solid #E4E4E4">
-              <a href="#/defter" onclick="nav('defter'); return false;"
-                style="font-size:15px;font-weight:500;color:#111;text-decoration:none;border-bottom:1px solid #111;padding:3px 2px"
-                onmouseover="this.style.cssText += ';background:#111;color:#fff'"
-                onmouseout="this.style.cssText = this.style.cssText.replace('background:#111;color:#fff', '')">→
-                defterimde ne var?</a>
-              <a href="#" onclick="nav('yakinda'); return false;"
-                style="font-size:15px;font-weight:500;color:#111;text-decoration:none;border-bottom:1px solid #111;padding:3px 2px"
-                onmouseover="this.style.cssText += ';background:#111;color:#fff'"
-                onmouseout="this.style.cssText = this.style.cssText.replace('background:#111;color:#fff', '')">→
-                rastlantıları disipline edelim</a>
+          <div id="defter-gece" class="defter-tab" style="display:none;">
+            <div style="max-width:680px">
+              <div data-reveal="1"
+                style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:16px">geceyi
+                alkışlayanlar · 2019 · on iş</div>
+              <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Üç bin kişilik bir
+                salonda, önemli bir konuşmanın ortasında ne diyeceğimi unuttum. Sustum. İnsanlar alkışlamaya başladı.
+              </p>
+              <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Alkışlanmanın garip
+                bir hissi var. O an neden alkışlandığımı anlamadığım için seyirciye sordum: "Beni neden alkışladınız?"
+                Sonra kendime sordum: sadece var olduğu için neyi alkışlarız? Zaman, ışık, gece, yaşam...</p>
+              <p data-reveal="1" style="margin:0 0 28px;font-size:16px;line-height:1.8;color:#222">Ben geceyi
+                alkışlardım. Bu defter o yüzden geceyi alkışlayanların defteri.</p>
+              <div data-reveal="1" style="padding:24px 0;border-top:1px solid #E4E4E4;border-bottom:1px solid #E4E4E4">
+                <p style="margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em">“Herkes kendi zindanında
+                  matemini tutar.”</p>
+                <div style="font-size:11px;color:#6E6E6E;margin-top:16px">Geceyi Alkışlayanlar defterinden · sözü
+                  Olcay Özmen'in</div>
+              </div>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
 
-    <div id="page-defter" class="page-section" style="display:none;">
-      <main>
-        <section style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) 28px clamp(40px,5vw,64px)">
-          <a href="#/" onclick="nav('home'); return false;" data-reveal="1"
-            style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:#6E6E6E;text-decoration:none;margin-bottom:32px"
-            onmouseover="this.style.cssText += ';color:#111'"
-            onmouseout="this.style.cssText = this.style.cssText.replace('color:#111', '')">← anasayfa</a>
-          <div data-reveal="1"
-            style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:24px">soru 04</div>
-          <h1 data-reveal="1"
-            style="margin:0;font-size:clamp(40px,6vw,76px);font-weight:600;letter-spacing:-.035em;line-height:1.03">
-            defterimde ne var?</h1>
-          <div data-reveal="1" style="max-width:680px;margin-top:32px">
-            <p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Merak, her canlının doğasında var. Soru
-              sormak ise şu an bildiğimiz kadarıyla yalnızca insanın yaptığı bir şey. Bazı insanlar araştırarak, kimi
-              deneyler yaparak, kimi düşünerek cevaplar ve yeni sorular arıyor.</p>
-            <p style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Ben defterlerime merak ettiğim soruları
-              çiziyorum, sonra dijital olarak düzenliyorum. Burada merak ettiğim ve fakat cevaplarını aramadığım sorular
-              var. Resim yaparken sorulardan ve boşluktan sıkça faydalanırım; bilirim ki bazı boşluklar doldurulmaz,
-              bazı sorular cevaplanamaz.</p>
-            <p style="margin:0;font-size:18px;font-weight:600">Altı defter.</p>
+          <div id="defter-dunya" class="defter-tab" style="display:none;">
+            <div style="max-width:680px">
+              <div data-reveal="1"
+                style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:16px">dünyanın
+                bu hali · 2021 · on üç iş</div>
+              <p data-reveal="1" style="margin:0 0 24px;font-size:18px;font-weight:500;line-height:1.6;color:#444">
+                İçinde bulunduğun dünyanın bu hali nereye gidecek, nerede bitecek, bir bilen yok mu? Neydi bu alemin
+                sonu?</p>
+              <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Bu defter,
+                arkadaşlarımın yazıp bestelediği "Dünyanın Bu Hali" şarkısının defteri.</p>
+              <p data-reveal="1" style="margin:0 0 28px;font-size:16px;line-height:1.8;color:#222">Bu gezegen evrende
+                yaşayabileceğimiz tek yer. Ama soğuğu donduruyor, sıcağı yakıyor; yüksekten düşünce, suyun içinde
+                fazla kalınca, daha başka koşullarda sürekli bir sona götürüyor bizi.</p>
+              <p data-reveal="1"
+                style="margin:0;padding:24px 0;border-top:1px solid #E4E4E4;border-bottom:1px solid #E4E4E4;font-size:20px;font-weight:600;letter-spacing:-.01em">
+                Ya hepimiz yeryüzüne sıkışıp kaldıysak?</p>
+            </div>
           </div>
-        </section>
 
-        <section
-          style="border-top:1px solid #E4E4E4;position:sticky;top:64px;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);z-index:40">
+          <div id="defter-tamamlanma" class="defter-tab" style="display:none;">
+            <div style="max-width:680px">
+              <div data-reveal="1"
+                style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:16px">
+                tamamlanma arzusu · 2013 · on altı iş</div>
+              <p data-reveal="1" style="margin:0 0 24px;font-size:22px;font-weight:600;letter-spacing:-.015em">İnsan,
+                yaşama doğuştan mı eksik gelir?</p>
+              <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Mezopotamya'nın en
+                eski hazinelerinden biri olan erbane sadece bir çalgı değil; doğuma ve ölüme eşlik eden bir ses.</p>
+              <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Van'da dört sene
+                yaşadım, Türkiye'yi defalarca baştan aşağı gezdim. İnançlardan ve yargılardan bağımsız olarak doğudaki
+                tarikatları ziyaret etme, "zikrullah" dedikleri vecd halindeki insanları gözlemleme şansım oldu.</p>
+              <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Ben de Şah
+                Hatayi'nin yazdığı, Erkan Oğur'un ses olduğu gibi "eksiklik kendi özümde" demeye geldim. Tamamlanma
+                arzusuyla çizdim.</p>
+              <p data-reveal="1" style="margin:0;font-size:13px;color:#6E6E6E">Bu defter Erkan Oğur'a ithaftır.</p>
+            </div>
+          </div>
+
+          <div id="defter-sanci" class="defter-tab" style="display:none;">
+            <div style="max-width:680px">
+              <div data-reveal="1"
+                style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:16px">8. sancım
+                · 2022 · sekiz iş</div>
+              <p data-reveal="1" style="margin:0 0 24px;font-size:22px;font-weight:600;letter-spacing:-.015em">Sahi
+                biz neyi hatırlayacaktık?</p>
+              <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Bir şeyi unutursun
+                ama unuttuğunu bilirsin. Dilinin ucunda durur, adını koyamazsın. İçimizde hep böyle şeyler var —
+                kaybolmamış, yalnızca hatırlanmayı bekleyen.</p>
+              <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Sancı da öyle bir
+                haberci. Bir yerin ağrıdığında orada bir şey olduğunu anlarsın; ağrımayan yeri fark etmezsin. Belki
+                hatırlamak da böyle bir şey: önce sızlar, sonra adını bulur.</p>
+              <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Defterin adı
+                sekizinci sancı. Ama içinde birinci var, üçüncü var, dördüncü, altıncı, yedinci, dokuzuncu var.
+                Sekizinci yok. Aradığım, adını koyduğum, defteri üzerine kurduğum sancı — çizemediğim tek sancı.</p>
+              <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222;font-weight:500">Bu defter
+                hatırlanmak üzere unutulmuş şeylerin defteri.</p>
+            </div>
+          </div>
+
+          <div id="defter-uyku" class="defter-tab" style="display:none;">
+            <div style="max-width:680px">
+              <div data-reveal="1"
+                style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:16px">bu kimin
+                uykusu? · 2012 · yedi iş</div>
+              <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Van depreminde
+                fiziksel bir göçükte kalmadım. Ama hayatım bir süre ağır bir manevi yıkıntıya döndü. Ölenler,
+                kalanlar, vedalar, aramalar, beklemeler.</p>
+              <p data-reveal="1" style="margin:0 0 28px;font-size:16px;line-height:1.8;color:#222">Depremden birkaç ay
+                sonra yoğun kaygı ve uykusuzluk başladı. Uyku ile uyanıklık arasında geçen dört günün sonunda
+                defterime şunu düştüm:</p>
+              <div data-reveal="1"
+                style="padding:24px 0;border-top:1px solid #E4E4E4;border-bottom:1px solid #E4E4E4;margin-bottom:28px">
+                <p style="margin:0;font-size:18px;font-weight:500;line-height:1.65">“Uyuyamıyorum. Bu kadar uykum
+                  varken uyuyamıyorsam, bu benim uykum olamaz. Ama içimde derin bir uyku var. Benim uykum olsa uyurum.
+                  Demek ki içimde başka birinin uykusu olmalı. İçimde başka birisi olmalı. Bu kimin uykusu?”</p>
+              </div>
+              <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">Bir sıkıntı anında göğe
+                bakamayanlar nereye bakarlar? İçeri. Ve orada her zaman yalnız değilsin.</p>
+            </div>
+          </div>
+
           <div
-            style="max-width:1280px;margin:0 auto;padding:0 28px;display:flex;flex-wrap:wrap;gap:4px 28px;align-items:center;min-height:52px">
-
-            <button onclick="selectDefter('gog', this); return false;" class="defter-chip active">göğ</button>
-            <button onclick="selectDefter('gece', this); return false;" class="defter-chip">geceyi
-              alkışlayanlar</button>
-            <button onclick="selectDefter('dunya', this); return false;" class="defter-chip">dünyanın bu hali</button>
-            <button onclick="selectDefter('tamamlanma', this); return false;" class="defter-chip">tamamlanma
-              arzusu</button>
-            <button onclick="selectDefter('sanci', this); return false;" class="defter-chip">8. sancım</button>
-            <button onclick="selectDefter('uyku', this); return false;" class="defter-chip">bu kimin uykusu?</button>
-
-          </div>
-        </section>
-
-        <section style="border-top:1px solid #E4E4E4">
-          <div style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,72px) 28px clamp(64px,9vw,120px)">
-
-            <div id="defter-gog" class="defter-tab" style="display:block;">
-              <div style="max-width:680px">
-                <div data-reveal="1"
-                  style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:16px">göğ ·
-                  2016 · dokuz iş</div>
-                <p data-reveal="1" style="margin:0 0 24px;font-size:22px;font-weight:600;letter-spacing:-.015em">çünkü
-                  insan büyümez, göğerir</p>
-                <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Çocukluğumdan beri
-                  arkadaşlarımla göğe bakmaya gideriz. Uşak'ta, Eskişehir'de, Van'da, gittiğim her yerde. İstanbul'a
-                  gelince fark ettiğim ilk şey şu oldu: burada insanların göğe bakacak bir yeri yok.</p>
-                <p data-reveal="1" style="margin:0 0 28px;font-size:16px;line-height:1.8;color:#222">Sonra düşünmeye
-                  başladım. Bakışlar, duyuşlar, gülüşler nerede birikir? Bir sıkıntı anında göğe bakamayanlar nereye
-                  bakarlar?</p>
-                <div data-reveal="1"
-                  style="padding:24px 0;border-top:1px solid #E4E4E4;border-bottom:1px solid #E4E4E4">
-                  <p style="margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em">“Beni kendimden bir gök
-                    saklıyor.”</p>
-                  <div style="font-size:11px;color:#6E6E6E;margin-top:16px">GÖĞ defterinden · sözü Olcay Özmen'in</div>
-                </div>
-              </div>
+            style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:20px;margin-top:clamp(40px,5vw,64px)">
+            <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img src="images/IMG_2235.JPG" alt="eser"
+                style="width:100%;height:100%;object-fit:cover;"></div>
+            <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img src="images/IMG_8594.JPG" alt="eser"
+                style="width:100%;height:100%;object-fit:cover;"></div>
+            <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img src="images/IMG_8793.JPG" alt="eser"
+                style="width:100%;height:100%;object-fit:cover;"></div>
+            <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img src="images/PIC00206.jpg" alt="eser"
+                style="width:100%;height:100%;object-fit:cover;"></div>
+            <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img
+                src="images/podkids_22_03_20257026.jpg" alt="eser" style="width:100%;height:100%;object-fit:cover;">
             </div>
-
-            <div id="defter-gece" class="defter-tab" style="display:none;">
-              <div style="max-width:680px">
-                <div data-reveal="1"
-                  style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:16px">geceyi
-                  alkışlayanlar · 2019 · on iş</div>
-                <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Üç bin kişilik bir
-                  salonda, önemli bir konuşmanın ortasında ne diyeceğimi unuttum. Sustum. İnsanlar alkışlamaya başladı.
-                </p>
-                <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Alkışlanmanın garip
-                  bir hissi var. O an neden alkışlandığımı anlamadığım için seyirciye sordum: "Beni neden alkışladınız?"
-                  Sonra kendime sordum: sadece var olduğu için neyi alkışlarız? Zaman, ışık, gece, yaşam...</p>
-                <p data-reveal="1" style="margin:0 0 28px;font-size:16px;line-height:1.8;color:#222">Ben geceyi
-                  alkışlardım. Bu defter o yüzden geceyi alkışlayanların defteri.</p>
-                <div data-reveal="1"
-                  style="padding:24px 0;border-top:1px solid #E4E4E4;border-bottom:1px solid #E4E4E4">
-                  <p style="margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em">“Herkes kendi zindanında
-                    matemini tutar.”</p>
-                  <div style="font-size:11px;color:#6E6E6E;margin-top:16px">Geceyi Alkışlayanlar defterinden · sözü
-                    Olcay Özmen'in</div>
-                </div>
-              </div>
+            <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img
+                src="images/podkids_22_03_20257034.jpg" alt="eser" style="width:100%;height:100%;object-fit:cover;">
             </div>
-
-            <div id="defter-dunya" class="defter-tab" style="display:none;">
-              <div style="max-width:680px">
-                <div data-reveal="1"
-                  style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:16px">dünyanın
-                  bu hali · 2021 · on üç iş</div>
-                <p data-reveal="1" style="margin:0 0 24px;font-size:18px;font-weight:500;line-height:1.6;color:#444">
-                  İçinde bulunduğun dünyanın bu hali nereye gidecek, nerede bitecek, bir bilen yok mu? Neydi bu alemin
-                  sonu?</p>
-                <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Bu defter,
-                  arkadaşlarımın yazıp bestelediği "Dünyanın Bu Hali" şarkısının defteri.</p>
-                <p data-reveal="1" style="margin:0 0 28px;font-size:16px;line-height:1.8;color:#222">Bu gezegen evrende
-                  yaşayabileceğimiz tek yer. Ama soğuğu donduruyor, sıcağı yakıyor; yüksekten düşünce, suyun içinde
-                  fazla kalınca, daha başka koşullarda sürekli bir sona götürüyor bizi.</p>
-                <p data-reveal="1"
-                  style="margin:0;padding:24px 0;border-top:1px solid #E4E4E4;border-bottom:1px solid #E4E4E4;font-size:20px;font-weight:600;letter-spacing:-.01em">
-                  Ya hepimiz yeryüzüne sıkışıp kaldıysak?</p>
-              </div>
+            <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img
+                src="images/podkids_22_03_20257118.jpg" alt="eser" style="width:100%;height:100%;object-fit:cover;">
             </div>
-
-            <div id="defter-tamamlanma" class="defter-tab" style="display:none;">
-              <div style="max-width:680px">
-                <div data-reveal="1"
-                  style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:16px">
-                  tamamlanma arzusu · 2013 · on altı iş</div>
-                <p data-reveal="1" style="margin:0 0 24px;font-size:22px;font-weight:600;letter-spacing:-.015em">İnsan,
-                  yaşama doğuştan mı eksik gelir?</p>
-                <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Mezopotamya'nın en
-                  eski hazinelerinden biri olan erbane sadece bir çalgı değil; doğuma ve ölüme eşlik eden bir ses.</p>
-                <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Van'da dört sene
-                  yaşadım, Türkiye'yi defalarca baştan aşağı gezdim. İnançlardan ve yargılardan bağımsız olarak doğudaki
-                  tarikatları ziyaret etme, "zikrullah" dedikleri vecd halindeki insanları gözlemleme şansım oldu.</p>
-                <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Ben de Şah
-                  Hatayi'nin yazdığı, Erkan Oğur'un ses olduğu gibi "eksiklik kendi özümde" demeye geldim. Tamamlanma
-                  arzusuyla çizdim.</p>
-                <p data-reveal="1" style="margin:0;font-size:13px;color:#6E6E6E">Bu defter Erkan Oğur'a ithaftır.</p>
-              </div>
+            <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img
+                src="images/podkids_22_03_20257123.jpg" alt="eser" style="width:100%;height:100%;object-fit:cover;">
             </div>
-
-            <div id="defter-sanci" class="defter-tab" style="display:none;">
-              <div style="max-width:680px">
-                <div data-reveal="1"
-                  style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:16px">8. sancım
-                  · 2022 · sekiz iş</div>
-                <p data-reveal="1" style="margin:0 0 24px;font-size:22px;font-weight:600;letter-spacing:-.015em">Sahi
-                  biz neyi hatırlayacaktık?</p>
-                <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Bir şeyi unutursun
-                  ama unuttuğunu bilirsin. Dilinin ucunda durur, adını koyamazsın. İçimizde hep böyle şeyler var —
-                  kaybolmamış, yalnızca hatırlanmayı bekleyen.</p>
-                <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Sancı da öyle bir
-                  haberci. Bir yerin ağrıdığında orada bir şey olduğunu anlarsın; ağrımayan yeri fark etmezsin. Belki
-                  hatırlamak da böyle bir şey: önce sızlar, sonra adını bulur.</p>
-                <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Defterin adı
-                  sekizinci sancı. Ama içinde birinci var, üçüncü var, dördüncü, altıncı, yedinci, dokuzuncu var.
-                  Sekizinci yok. Aradığım, adını koyduğum, defteri üzerine kurduğum sancı — çizemediğim tek sancı.</p>
-                <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222;font-weight:500">Bu defter
-                  hatırlanmak üzere unutulmuş şeylerin defteri.</p>
-              </div>
-            </div>
-
-            <div id="defter-uyku" class="defter-tab" style="display:none;">
-              <div style="max-width:680px">
-                <div data-reveal="1"
-                  style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:16px">bu kimin
-                  uykusu? · 2012 · yedi iş</div>
-                <p data-reveal="1" style="margin:0 0 18px;font-size:16px;line-height:1.8;color:#222">Van depreminde
-                  fiziksel bir göçükte kalmadım. Ama hayatım bir süre ağır bir manevi yıkıntıya döndü. Ölenler,
-                  kalanlar, vedalar, aramalar, beklemeler.</p>
-                <p data-reveal="1" style="margin:0 0 28px;font-size:16px;line-height:1.8;color:#222">Depremden birkaç ay
-                  sonra yoğun kaygı ve uykusuzluk başladı. Uyku ile uyanıklık arasında geçen dört günün sonunda
-                  defterime şunu düştüm:</p>
-                <div data-reveal="1"
-                  style="padding:24px 0;border-top:1px solid #E4E4E4;border-bottom:1px solid #E4E4E4;margin-bottom:28px">
-                  <p style="margin:0;font-size:18px;font-weight:500;line-height:1.65">“Uyuyamıyorum. Bu kadar uykum
-                    varken uyuyamıyorsam, bu benim uykum olamaz. Ama içimde derin bir uyku var. Benim uykum olsa uyurum.
-                    Demek ki içimde başka birinin uykusu olmalı. İçimde başka birisi olmalı. Bu kimin uykusu?”</p>
-                </div>
-                <p data-reveal="1" style="margin:0;font-size:16px;line-height:1.8;color:#222">Bir sıkıntı anında göğe
-                  bakamayanlar nereye bakarlar? İçeri. Ve orada her zaman yalnız değilsin.</p>
-              </div>
-            </div>
-
-            <div
-              style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:20px;margin-top:clamp(40px,5vw,64px)">
-              <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img src="images/IMG_2235.JPG" alt="eser"
-                  style="width:100%;height:100%;object-fit:cover;"></div>
-              <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img src="images/IMG_8594.JPG" alt="eser"
-                  style="width:100%;height:100%;object-fit:cover;"></div>
-              <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img src="images/IMG_8793.JPG" alt="eser"
-                  style="width:100%;height:100%;object-fit:cover;"></div>
-              <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img src="images/PIC00206.jpg" alt="eser"
-                  style="width:100%;height:100%;object-fit:cover;"></div>
-              <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img src="images/podkids_22_03_20257026.jpg" alt="eser"
-                  style="width:100%;height:100%;object-fit:cover;"></div>
-              <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img src="images/podkids_22_03_20257034.jpg" alt="eser"
-                  style="width:100%;height:100%;object-fit:cover;"></div>
-              <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img src="images/podkids_22_03_20257118.jpg" alt="eser"
-                  style="width:100%;height:100%;object-fit:cover;"></div>
-              <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img src="images/podkids_22_03_20257123.jpg" alt="eser"
-                  style="width:100%;height:100%;object-fit:cover;"></div>
-              <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img src="images/podkids_22_03_20257126.jpg" alt="eser"
-                  style="width:100%;height:100%;object-fit:cover;"></div>
-            </div>
-
-            <div data-reveal="1" style="margin-top:clamp(48px,6vw,72px);padding-top:32px;border-top:1px solid #E4E4E4">
-              <a href="#" onclick="nav('yakinda'); return false;"
-                style="font-size:15px;font-weight:500;color:#111;text-decoration:none;border-bottom:1px solid #111;padding:3px 2px"
-                onmouseover="this.style.cssText += ';background:#111;color:#fff'"
-                onmouseout="this.style.cssText = this.style.cssText.replace('background:#111;color:#fff', '')">→
-                foundation</a>
+            <div data-reveal="1" style="aspect-ratio:1/1;background:#FAFAFA"><img
+                src="images/podkids_22_03_20257126.jpg" alt="eser" style="width:100%;height:100%;object-fit:cover;">
             </div>
           </div>
-        </section>
-      </main>
-    </div>
 
-    <div id="page-nekurduk" class="page-section" style="display:none;">
-      <main>
-        <section style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) 28px 0">
-          <a href="#/" onclick="nav('home'); return false;" data-reveal="1"
-            style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:#6E6E6E;text-decoration:none;margin-bottom:32px"
-            onmouseover="this.style.cssText += ';color:#111'"
-            onmouseout="this.style.cssText = this.style.cssText.replace('color:#111', '')">← anasayfa</a>
-          <div data-reveal="1"
-            style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:24px">soru 03</div>
-          <h1 data-reveal="1"
-            style="margin:0;font-size:clamp(40px,6vw,76px);font-weight:600;letter-spacing:-.035em;line-height:1.03">
-            neler kurdum?</h1>
-          <p data-reveal="1"
-            style="margin:28px 0 0;font-size:clamp(17px,2vw,21px);line-height:1.6;color:#6E6E6E;max-width:640px;text-wrap:pretty">
-            Hepsinin altında aynı soru var: çocuğun kendi sorusu masaya geldiğinde ne oluyor? Aşağıdaki her girişim, bu
-            soruya bir cevap denemesi.</p>
-        </section>
-
-        <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,80px) 28px clamp(40px,5vw,64px)">
-          <div data-reveal="1"
-            style="display:grid;grid-template-columns:48px 1fr auto;gap:18px;padding:22px 0;border-top:1px solid #E4E4E4;align-items:baseline;">
-            <span style="font-size:13px;color:#B0B0B0">01</span>
-            <span><span style="display:block;font-size:20px;font-weight:600;letter-spacing:-.01em">Hayal Gücü
-                Merkezi</span><span
-                style="display:block;font-size:14px;color:#555;margin-top:5px;line-height:1.6">2012'de Van'da, bir
-                okulun bodrum katında çocuklarla birlikte kurduk. Çocuğun kendi sorusunun masaya geldiği, çizim, tasarım
-                ve üretim atölyelerinden oluşan yeni nesil bir öğrenme mekanı. Bugün farklı şehirlerde, farklı okullarda
-                kuruluyor.</span></span>
-            <span style="font-size:13px;color:#6E6E6E;white-space:nowrap">2012 → · sosyal girişim · çok mekanlı</span>
-          </div>
-          <div data-reveal="1"
-            style="display:grid;grid-template-columns:48px 1fr auto;gap:18px;padding:22px 0;border-top:1px solid #E4E4E4;align-items:baseline;">
-            <span style="font-size:13px;color:#B0B0B0">02</span>
-            <span><span style="display:block;font-size:20px;font-weight:600;letter-spacing:-.01em">Yeni Nesil
-                Öğrenme</span><span style="display:block;font-size:14px;color:#555;margin-top:5px;line-height:1.6">Khan
-                Academy iş birliğiyle kurduğumuz, teknolojiyi merak pedagojisiyle buluşturan bir eğitimci topluluğu.
-                Öğretmenlerin birbirinden öğrendiği, uygulamayı sahada denediği bir ağ.</span></span>
-            <span style="font-size:13px;color:#6E6E6E;white-space:nowrap">2017 → · topluluk · Khan Academy</span>
-          </div>
-          <div data-reveal="1"
-            style="display:grid;grid-template-columns:48px 1fr auto;gap:18px;padding:22px 0;border-top:1px solid #E4E4E4;align-items:baseline;">
-            <span style="font-size:13px;color:#B0B0B0">03</span>
-            <span><span style="display:block;font-size:20px;font-weight:600;letter-spacing:-.01em">Hayal Gücü
-                Ödülleri</span><span
-                style="display:block;font-size:14px;color:#555;margin-top:5px;line-height:1.6">Kendi çevresinde bir
-                merak ateşi yakan çocukları, öğretmenleri ve toplulukları görünür kılan bir ödül programı. Amaç madalya
-                vermek değil; iyi örneği çoğaltmak.</span></span>
-            <span style="font-size:13px;color:#6E6E6E;white-space:nowrap">2023 → · ödül programı</span>
-          </div>
-          <div data-reveal="1"
-            style="display:grid;grid-template-columns:48px 1fr auto;gap:18px;padding:22px 0;border-top:1px solid #E4E4E4;align-items:baseline;">
-            <span style="font-size:13px;color:#B0B0B0">04</span>
-            <span><span style="display:block;font-size:20px;font-weight:600;letter-spacing:-.01em">hmmm</span><span
-                style="display:block;font-size:14px;color:#555;margin-top:5px;line-height:1.6">Oyun tabanlı bir sosyal
-                öğrenme platformu. Çocukların merakını bir oyunun mekaniğine çeviriyor; öğrenmeyi bir görev listesi
-                değil, bir keşif oyunu hâline getiriyor.</span></span>
-            <span style="font-size:13px;color:#6E6E6E;white-space:nowrap">2023 → · dijital platform</span>
-          </div>
-          <div data-reveal="1"
-            style="display:grid;grid-template-columns:48px 1fr auto;gap:18px;padding:22px 0;border-top:1px solid #E4E4E4;align-items:baseline;">
-            <span style="font-size:13px;color:#B0B0B0">05</span>
-            <span><span style="display:block;font-size:20px;font-weight:600;letter-spacing:-.01em">Podkids</span><span
-                style="display:block;font-size:14px;color:#555;margin-top:5px;line-height:1.6">Çocukların hem dinleyici
-                hem anlatıcı olduğu bir çocuk medyası. Sorular çocuklardan, cevaplar merakın peşinden
-                geliyor.</span></span>
-            <span style="font-size:13px;color:#6E6E6E;white-space:nowrap">2024 → · çocuk medyası</span>
-          </div>
-        </section>
-      </main>
-    </div>
-
-    <sc-if value="{{isSoon}}" hint-placeholder-val="false">
-      <main>
-        <section style="max-width:920px;margin:0 auto;padding:clamp(80px,12vw,160px) 28px;min-height:46vh">
-          <div style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:24px">yakında
-          </div>
-          <h1 style="margin:0;font-size:clamp(34px,5vw,60px);font-weight:600;letter-spacing:-.03em;line-height:1.05">
-          </h1>
-          <p style="margin:24px 0 0;font-size:16px;line-height:1.75;color:#444;max-width:520px">Bu sayfa bir sonraki
-            aşamada tasarlanacak. Metni hazır, sıra yerleşiminde.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:16px 36px;margin-top:40px">
-            <a href="#/" onclick="nav('home'); return false;"
-              style="font-size:15px;font-weight:500;color:#111;text-decoration:none;border-bottom:1px solid #111;padding:3px 2px"
-              onmouseover="this.style.cssText += ';background:#111;color:#fff'"
-              onmouseout="this.style.cssText = this.style.cssText.replace('background:#111;color:#fff', '')">→ başa
-              dön</a>
-            <a href="#" onclick="openMenu(); return false;"
+          <div data-reveal="1" style="margin-top:clamp(48px,6vw,72px);padding-top:32px;border-top:1px solid #E4E4E4">
+            <a href="#" onclick="nav('yakinda'); return false;"
               style="font-size:15px;font-weight:500;color:#111;text-decoration:none;border-bottom:1px solid #111;padding:3px 2px"
               onmouseover="this.style.cssText += ';background:#111;color:#fff'"
               onmouseout="this.style.cssText = this.style.cssText.replace('background:#111;color:#fff', '')">→
-              menüyü aç</a>
+              foundation</a>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+    </main>
   </div>
 
+  <div id="page-nekurduk" class="page-section" style="display:none;">
+    <main>
+      <section style="max-width:1280px;margin:0 auto;padding:clamp(56px,8vw,96px) 28px 0">
+        <a href="#/" onclick="nav('home'); return false;" data-reveal="1"
+          style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:#6E6E6E;text-decoration:none;margin-bottom:32px"
+          onmouseover="this.style.cssText += ';color:#111'"
+          onmouseout="this.style.cssText = this.style.cssText.replace('color:#111', '')">← anasayfa</a>
+        <div data-reveal="1"
+          style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:24px">soru 03</div>
+        <h1 data-reveal="1"
+          style="margin:0;font-size:clamp(40px,6vw,76px);font-weight:600;letter-spacing:-.035em;line-height:1.03">
+          neler kurdum?</h1>
+        <p data-reveal="1"
+          style="margin:28px 0 0;font-size:clamp(17px,2vw,21px);line-height:1.6;color:#6E6E6E;max-width:640px;text-wrap:pretty">
+          Hepsinin altında aynı soru var: çocuğun kendi sorusu masaya geldiğinde ne oluyor? Aşağıdaki her girişim, bu
+          soruya bir cevap denemesi.</p>
+      </section>
+
+      <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,80px) 28px clamp(40px,5vw,64px)">
+        <div data-reveal="1"
+          style="display:grid;grid-template-columns:48px 1fr auto;gap:18px;padding:22px 0;border-top:1px solid #E4E4E4;align-items:baseline;">
+          <span style="font-size:13px;color:#B0B0B0">01</span>
+          <span><span style="display:block;font-size:20px;font-weight:600;letter-spacing:-.01em">Hayal Gücü
+              Merkezi</span><span style="display:block;font-size:14px;color:#555;margin-top:5px;line-height:1.6">2012'de
+              Van'da, bir
+              okulun bodrum katında çocuklarla birlikte kurduk. Çocuğun kendi sorusunun masaya geldiği, çizim, tasarım
+              ve üretim atölyelerinden oluşan yeni nesil bir öğrenme mekanı. Bugün farklı şehirlerde, farklı okullarda
+              kuruluyor.</span></span>
+          <span style="font-size:13px;color:#6E6E6E;white-space:nowrap">2012 → · sosyal girişim · çok mekanlı</span>
+        </div>
+        <div data-reveal="1"
+          style="display:grid;grid-template-columns:48px 1fr auto;gap:18px;padding:22px 0;border-top:1px solid #E4E4E4;align-items:baseline;">
+          <span style="font-size:13px;color:#B0B0B0">02</span>
+          <span><span style="display:block;font-size:20px;font-weight:600;letter-spacing:-.01em">Yeni Nesil
+              Öğrenme</span><span style="display:block;font-size:14px;color:#555;margin-top:5px;line-height:1.6">Khan
+              Academy iş birliğiyle kurduğumuz, teknolojiyi merak pedagojisiyle buluşturan bir eğitimci topluluğu.
+              Öğretmenlerin birbirinden öğrendiği, uygulamayı sahada denediği bir ağ.</span></span>
+          <span style="font-size:13px;color:#6E6E6E;white-space:nowrap">2017 → · topluluk · Khan Academy</span>
+        </div>
+        <div data-reveal="1"
+          style="display:grid;grid-template-columns:48px 1fr auto;gap:18px;padding:22px 0;border-top:1px solid #E4E4E4;align-items:baseline;">
+          <span style="font-size:13px;color:#B0B0B0">03</span>
+          <span><span style="display:block;font-size:20px;font-weight:600;letter-spacing:-.01em">Hayal Gücü
+              Ödülleri</span><span style="display:block;font-size:14px;color:#555;margin-top:5px;line-height:1.6">Kendi
+              çevresinde bir
+              merak ateşi yakan çocukları, öğretmenleri ve toplulukları görünür kılan bir ödül programı. Amaç madalya
+              vermek değil; iyi örneği çoğaltmak.</span></span>
+          <span style="font-size:13px;color:#6E6E6E;white-space:nowrap">2023 → · ödül programı</span>
+        </div>
+        <div data-reveal="1"
+          style="display:grid;grid-template-columns:48px 1fr auto;gap:18px;padding:22px 0;border-top:1px solid #E4E4E4;align-items:baseline;">
+          <span style="font-size:13px;color:#B0B0B0">04</span>
+          <span><span style="display:block;font-size:20px;font-weight:600;letter-spacing:-.01em">hmmm</span><span
+              style="display:block;font-size:14px;color:#555;margin-top:5px;line-height:1.6">Oyun tabanlı bir sosyal
+              öğrenme platformu. Çocukların merakını bir oyunun mekaniğine çeviriyor; öğrenmeyi bir görev listesi
+              değil, bir keşif oyunu hâline getiriyor.</span></span>
+          <span style="font-size:13px;color:#6E6E6E;white-space:nowrap">2023 → · dijital platform</span>
+        </div>
+        <div data-reveal="1"
+          style="display:grid;grid-template-columns:48px 1fr auto;gap:18px;padding:22px 0;border-top:1px solid #E4E4E4;align-items:baseline;">
+          <span style="font-size:13px;color:#B0B0B0">05</span>
+          <span><span style="display:block;font-size:20px;font-weight:600;letter-spacing:-.01em">Podkids</span><span
+              style="display:block;font-size:14px;color:#555;margin-top:5px;line-height:1.6">Çocukların hem dinleyici
+              hem anlatıcı olduğu bir çocuk medyası. Sorular çocuklardan, cevaplar merakın peşinden
+              geliyor.</span></span>
+          <span style="font-size:13px;color:#6E6E6E;white-space:nowrap">2024 → · çocuk medyası</span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <sc-if value="{{isSoon}}" hint-placeholder-val="false">
+    <main>
+      <section style="max-width:920px;margin:0 auto;padding:clamp(80px,12vw,160px) 28px;min-height:46vh">
+        <div style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:24px">yakında
+        </div>
+        <h1 style="margin:0;font-size:clamp(34px,5vw,60px);font-weight:600;letter-spacing:-.03em;line-height:1.05">
+        </h1>
+        <p style="margin:24px 0 0;font-size:16px;line-height:1.75;color:#444;max-width:520px">Bu sayfa bir sonraki
+          aşamada tasarlanacak. Metni hazır, sıra yerleşiminde.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:16px 36px;margin-top:40px">
+          <a href="#/" onclick="nav('home'); return false;"
+            style="font-size:15px;font-weight:500;color:#111;text-decoration:none;border-bottom:1px solid #111;padding:3px 2px"
+            onmouseover="this.style.cssText += ';background:#111;color:#fff'"
+            onmouseout="this.style.cssText = this.style.cssText.replace('background:#111;color:#fff', '')">→ başa
+            dön</a>
+          <a href="#" onclick="openMenu(); return false;"
+            style="font-size:15px;font-weight:500;color:#111;text-decoration:none;border-bottom:1px solid #111;padding:3px 2px"
+            onmouseover="this.style.cssText += ';background:#111;color:#fff'"
+            onmouseout="this.style.cssText = this.style.cssText.replace('background:#111;color:#fff', '')">→
+            menüyü aç</a>
+        </div>
+      </section>
+    </main>
+  </sc-if>
+
+
+    
+    <div id="page-yakinda" class="page-section" style="display:none;">
+      <main style="max-width:1280px;margin:0 auto;padding:clamp(64px,9vw,120px) 28px;min-height:65vh;display:flex;flex-direction:column;justify-content:center;align-items:flex-start">
+        <div data-reveal="1">
+          <div style="font-size:12px;font-weight:500;letter-spacing:.14em;color:#6E6E6E;margin-bottom:20px;text-transform:uppercase">YAKINDA</div>
+          <h1 id="yakinda-title" style="margin:0 0 24px;font-size:clamp(32px,5vw,60px);font-weight:600;letter-spacing:-.03em;line-height:1.1;color:#111">Bu içerik yakında burada olacak.</h1>
+          <p style="font-size:18px;line-height:1.6;color:#6E6E6E;max-width:600px;margin:0 0 40px">Bu kapı hazırlık aşamasındadır. Çok yakında yeni içerikler, çalışmalar ve detaylarla keşfinize açılacaktır.</p>
+          <div style="display:flex;gap:20px;flex-wrap:wrap">
+            <a href="#/" onclick="nav('home'); return false;" style="font-size:15px;font-weight:500;color:#111;text-decoration:none;border-bottom:1px solid #111;padding:4px 0" onmouseover="this.style.cssText += ';background:#111;color:#fff'" onmouseout="this.style.cssText = this.style.cssText.replace('background:#111;color:#fff', '')">← Ana Sayfaya Dön</a>
+            <a href="#/hakkimda" onclick="nav('hakkimda'); return false;" style="font-size:15px;font-weight:500;color:#111;text-decoration:none;border-bottom:1px solid #111;padding:4px 0" onmouseover="this.style.cssText += ';background:#111;color:#fff'" onmouseout="this.style.cssText = this.style.cssText.replace('background:#111;color:#fff', '')">Nereden Geliyorum?</a>
+          </div>
+        </div>
+      </main>
+    </div>
 
     <footer style="border-top:1px solid #E4E4E4">
       <div
@@ -1607,14 +1746,35 @@ class Component extends DCLogic {
 
 
 
-    <script>
-      function nav(page) {
-      closeMenu();
+        <script>
+      function nav(page, label) {
+        closeMenu();
+
+        if (page === 'iletisim' || page === 'iletişim') {
+          document.querySelectorAll('.page-section').forEach(el => el.style.display = 'none');
+          let home = document.getElementById('page-home');
+          if (home) home.style.display = 'block';
+          window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+          return;
+        }
 
         document.querySelectorAll('.page-section').forEach(el => el.style.display = 'none');
         let target = document.getElementById('page-' + page);
-        if (target) target.style.display = 'block';
-        window.scrollTo(0, 0);
+        if (!target && (page === 'yakinda' || page === 'soon')) {
+          target = document.getElementById('page-yakinda');
+          let titleEl = document.getElementById('yakinda-title');
+          if (titleEl) {
+            titleEl.innerText = label ? label : 'Bu içerik yakında burada olacak.';
+          }
+        }
+        if (target) {
+          target.style.display = 'block';
+          window.scrollTo(0, 0);
+        } else {
+          let home = document.getElementById('page-home');
+          if (home) home.style.display = 'block';
+        }
+
         // Trigger animations
         document.querySelectorAll('[data-reveal]').forEach(el => {
           el.classList.remove('rv-in');
@@ -1622,9 +1782,11 @@ class Component extends DCLogic {
         });
       }
       window.addEventListener('hashchange', () => {
-        let hash = window.location.hash.replace('#/', '');
+        let hash = window.location.hash.replace(/^#\/?/, '');
         if (hash === '' || hash === '/') nav('home');
-        else if (['hakkimda', 'defter', 'nekurduk'].includes(hash)) nav(hash);
+        else if (['hakkimda', 'defter', 'nekurduk', 'yakinda'].includes(hash)) nav(hash);
+        else if (hash === 'iletisim' || hash === 'iletişim') nav('iletisim');
+        else nav('yakinda', decodeURIComponent(hash));
       });
 
       function openMenu() { document.getElementById('fullscreen-menu').style.transform = 'translateY(0)'; document.body.style.overflow = 'hidden'; }
@@ -1677,10 +1839,6 @@ class Component extends DCLogic {
       .defter-chip:hover {
         color: #111;
       }
-    
-
-
-
     </style>
 </body>
 
